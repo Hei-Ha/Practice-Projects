@@ -1,5 +1,5 @@
 <script setup>
-import { HelloWorld } from './components/HelloWorld.jsx';
+import { HelloWorld } from './components/HelloWorld.tsx';
 </script>
 
 <template>
