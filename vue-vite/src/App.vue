@@ -1,11 +1,22 @@
 <script setup>
-import { HelloWorld } from './components/HelloWorld.tsx';
+import { ref } from 'vue';
+// import { HelloWorld } from './components/HelloWorld.tsx';
+
+import { Button } from 'ant-design-vue';
+const a = ref(1);
+
+const addA = () => {
+  a.value = a.value + 1;
+}
+
 </script>
 
 <template>
   <div>
-    Hello world
-    <HelloWorld />
+    <Button type="primary" @click="addA">Click</Button>
+    <span>
+      {{ a }}
+    </span>
   </div>
 </template>
 
