@@ -1,5 +1,10 @@
 import React, { useImperativeHandle } from 'react';
+import { useBaseStore} from "@/store";
+import { Button } from 'antd'
+
 export const Test2 = (props: any) => {
+    
+    const count = useBaseStore(state => state.count);
     
     useImperativeHandle(props.env, () => {
         return {
@@ -12,5 +17,13 @@ export const Test2 = (props: any) => {
     }
     return <div className='border border-#CCCCCC border-solid'>
         Children
+        
+        
+        
+        {/*<Button type='primary'>Test</Button>*/}
+        {/*<div>*/}
+        {/*    children 中的  store count :*/}
+        {/*    <p>{count}</p>*/}
+        {/*</div>*/}
     </div>
 }
