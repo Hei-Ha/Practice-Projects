@@ -74,6 +74,7 @@ const showLoading = () => {
         dom.setAttribute('id', 'loading')
         document.body.appendChild(dom)
         ReactDom.render(<Spin tip="加载中..." />, dom);
+        // ReactDom.createRoot(document.getElementById("root"))
     }
 }
 const closeLoading = () => {

@@ -25,4 +25,7 @@ const resMenu = filterPermissions([].concat(...menus))
 // 按照 weight 排序
 resMenu.sort((a, b) => a.weight - b.weight)
 
+
+console.log(home.concat(resMenu))
+console.log(1)
 export default home.concat(resMenu)
