@@ -12,11 +12,14 @@ const routerConfig = [
     {
         name: 'home',
         path: '/',
-        element: <Home />
+        element: <Home />,
+        children: []
     }
 ]
 
 
 const res = filterPermissions([].concat(...routers))
+
+// console.log('router', routerConfig.concat(res))
 
 export default routerConfig.concat(res)

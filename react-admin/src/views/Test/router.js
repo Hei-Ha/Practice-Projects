@@ -1,18 +1,41 @@
 import React from "react";
 import { Index } from './src/Test1/index';
 import { ZustandIndex } from './src/Test2/index';
+import { VirtualList } from "@/views/Test/src/Test3";
 
 export default [
     {
-        name: 'Test1',
-        path: '/Test/Test1/父组件调用子组件方法',
+        name: 'Test',
+        path: '/Test',
         rules: ['*'],
-        element: <Index />
+        children: [
+            {
+                name: '父组件调用子组件方法',
+                path: '/Test/父组件调用子组件方法',
+                rules: ['*'],
+                element: <Index />
+            },
+            {
+                name: 'Zustand基本使用',
+                path: '/Test/Zustand基本使用',
+                rules: ['*'],
+                element: <ZustandIndex />
+            },
+            {
+                name: '虚拟长列表',
+                path: '/Test/虚拟长列表',
+                rules: ['*'],
+                element: <VirtualList />
+                // children: [
+                //     {
+                //         name: '虚拟长列表',
+                //         path: '/Test/虚拟长列表',
+                //         rules: ['*'],
+                //
+                //     }
+                // ]
+            }
+        ]
     },
-    {
-        name: 'Test2',
-        path: '/Test/Test2/Zustand基本使用',
-        rules: ['*'],
-        element: <ZustandIndex />
-    }
+    
 ]

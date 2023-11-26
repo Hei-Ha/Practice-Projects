@@ -26,6 +26,6 @@ const resMenu = filterPermissions([].concat(...menus))
 resMenu.sort((a, b) => a.weight - b.weight)
 
 
-console.log(home.concat(resMenu))
-console.log(1)
+// console.log(home.concat(resMenu))
+// console.log(1)
 export default home.concat(resMenu)
