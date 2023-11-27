@@ -9,12 +9,12 @@ export default [
         weight: 2,
         children: [
             {
-                label: <Link to='/Test/父组件调用子组件方法'>父组件调用子组件方法</Link>,
+                label: <Link to='/Test/父组件调用子组件方法'>1-父组件调用子组件方法</Link>,
                 key: '/Test/父组件调用子组件方法',
                 rules: ['*'],
             },
             {
-                label: <Link to={'/Test/Zustand基本使用'}>Zustand基本使用</Link>,
+                label: <Link to={'/Test/Zustand基本使用'}>2-Zustand基本使用</Link>,
                 key: '/Test/Zustand基本使用',
                 rules: ['*'],
                 // children: [
@@ -26,7 +26,7 @@ export default [
                 // ]
             },
             {
-                label: <Link to={'Test/虚拟长列表'}>虚拟长列表</Link>,
+                label: <Link to={'Test/虚拟长列表'}>3-虚拟长列表</Link>,
                 key: '/Test/虚拟长列表',
                 rules: ['*'],
             }
