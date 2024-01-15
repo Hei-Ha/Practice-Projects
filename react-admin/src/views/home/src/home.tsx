@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactEditorJS } from '@/components/editor'
 
 export const Home = (): JSX.Element => {
     return <>
@@ -6,5 +7,6 @@ export const Home = (): JSX.Element => {
         <h2>Title</h2>
         <h1>h1</h1>
         <p>p标签</p>
+        <ReactEditorJS />
     </>
 }
