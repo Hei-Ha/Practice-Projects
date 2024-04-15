@@ -58,7 +58,7 @@ export const ContentContainer = (props: propsValue): JSX.Element => {
             </Routes>
         </Content>
         <Footer className={'footer'}>
-            Design of AntD
+            Design by AntDesign
         </Footer>
     </Layout>
 }
