@@ -17,17 +17,15 @@ export default [
                 label: <Link to={'/Test/Zustand基本使用'}>2-Zustand基本使用</Link>,
                 key: '/Test/Zustand基本使用',
                 rules: ['*'],
-                // children: [
-                //     {
-                //         label: <Link to={'/Test/Test2/Zustand基本使用'}>Zustand基本使用</Link>,
-                //         key: '/Test/Test2/Zustand基本使用',
-                //         rules: ['*'],
-                //     }
-                // ]
             },
             {
                 label: <Link to={'Test/虚拟长列表'}>3-虚拟长列表</Link>,
                 key: '/Test/虚拟长列表',
+                rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/图片懒加载'}>4-实现图片懒加载</Link>,
+                key: '/Test/图片懒加载',
                 rules: ['*'],
             }
         ]

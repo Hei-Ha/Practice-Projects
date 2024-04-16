@@ -27,7 +27,7 @@ export const VirtualList = () => {
         }
         
         return () => {
-            listRef.current.removeEventListener('scroll', scrollFun);
+            listRef.current?.removeEventListener('scroll', scrollFun);
         }
     }, [])
     
