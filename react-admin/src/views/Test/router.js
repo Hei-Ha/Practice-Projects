@@ -3,6 +3,7 @@ import { Index } from './src/Test1/index';
 import { ZustandIndex } from './src/Test2/index';
 import { VirtualList } from "@/views/Test/src/Test3";
 import LazyLoad from './src/Test4/index.tsx';
+import LazyLoad1 from './src/Test4/index1.js';
 
 export default [
     {
@@ -32,7 +33,7 @@ export default [
                 name: '图片懒加载',
                 path: '/Test/图片懒加载',
                 rules: ['*'],
-                element: <LazyLoad />,
+                element: <LazyLoad1 />,
             }
         ]
     },
