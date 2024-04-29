@@ -4,6 +4,7 @@ import { ZustandIndex } from './src/Test2/index';
 import { VirtualList } from "@/views/Test/src/Test3";
 import LazyLoad from './src/Test4/index.tsx';
 import LazyLoad1 from './src/Test4/index1.js';
+import CustomXY from './src/Test5/index.tsx';
 
 export default [
     {
@@ -34,6 +35,12 @@ export default [
                 path: '/Test/图片懒加载',
                 rules: ['*'],
                 element: <LazyLoad1 />,
+            },
+            {
+                name: '自定义显示鼠标坐标',
+                path: '/Test/自定义Hook显示鼠标坐标',
+                rules: ['*'],
+                element: <CustomXY />
             }
         ]
     },

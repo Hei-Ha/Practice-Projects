@@ -27,6 +27,11 @@ export default [
                 label: <Link to={'Test/图片懒加载'}>4-实现图片懒加载</Link>,
                 key: '/Test/图片懒加载',
                 rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/自定义Hook显示鼠标坐标'}>5-自定义Hook显示鼠标坐标</Link>,
+                key: '/Test/自定义Hook显示鼠标坐标',
+                rules: ['*'],
             }
         ]
     }
