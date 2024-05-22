@@ -5,6 +5,7 @@ import { VirtualList } from "@/views/Test/src/Test3";
 import LazyLoad from './src/Test4/index.tsx';
 import LazyLoad1 from './src/Test4/index1.js';
 import CustomXY from './src/Test5/index.tsx';
+import ReactComponent from './src/Test6'
 
 export default [
     {
@@ -41,6 +42,12 @@ export default [
                 path: '/Test/自定义Hook显示鼠标坐标',
                 rules: ['*'],
                 element: <CustomXY />
+            },
+            {
+                name: '封装React组件',
+                path: '/Test/封装React组件',
+                rules: ['*'],
+                element: <ReactComponent btnContent={12} hoverContent={34} />
             }
         ]
     },

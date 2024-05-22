@@ -32,6 +32,11 @@ export default [
                 label: <Link to={'Test/自定义Hook显示鼠标坐标'}>5-自定义Hook显示鼠标坐标</Link>,
                 key: '/Test/自定义Hook显示鼠标坐标',
                 rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/封装React组件'}>6-封装React组件</Link>,
+                key: '/Test/封装React组件',
+                rules: ['*'],
             }
         ]
     }
