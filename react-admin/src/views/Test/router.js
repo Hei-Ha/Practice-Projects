@@ -7,6 +7,7 @@ import LazyLoad1 from './src/Test4/index1.js';
 
 import CustomXY from './src/Test5/index.tsx';
 import ReactComponent from './src/Test6'
+import Test7 from './src/Test7'
 
 
 export default [
@@ -51,7 +52,12 @@ export default [
                 path: '/Test/封装React组件',
                 rules: ['*'],
                 element: <ReactComponent btnContent={12} hoverContent={34} />
-
+            },
+            {
+                name: 'react闭包陷阱',
+                path: '/Test/react闭包陷阱',
+                rules: ['*'],
+                element: <Test7 />
             }
         ]
     },

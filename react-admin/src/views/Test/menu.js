@@ -38,6 +38,11 @@ export default [
                 label: <Link to={'Test/封装React组件'}>6-封装React组件</Link>,
                 key: '/Test/封装React组件',
                 rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/react闭包陷阱'}>7-react闭包陷阱</Link>,
+                key: '/Test/react闭包陷阱',
+                rules: ['*'],
             }
         ]
     }
