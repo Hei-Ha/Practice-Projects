@@ -8,7 +8,7 @@ import LazyLoad1 from './src/Test4/index1.js';
 import CustomXY from './src/Test5/index.tsx';
 import ReactComponent from './src/Test6'
 import Test7 from './src/Test7'
-
+import Test8 from './src/Test8'
 
 export default [
     {
@@ -58,6 +58,12 @@ export default [
                 path: '/Test/react闭包陷阱',
                 rules: ['*'],
                 element: <Test7 />
+            },
+            {
+                name: 'react实现定时器',
+                path: '/Test/react实现定时器',
+                rules: ['*'],
+                element: <Test8 />
             }
         ]
     },

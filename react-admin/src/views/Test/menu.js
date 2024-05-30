@@ -43,6 +43,11 @@ export default [
                 label: <Link to={'Test/react闭包陷阱'}>7-react闭包陷阱</Link>,
                 key: '/Test/react闭包陷阱',
                 rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/react实现定时器'}>8-react实现定时器</Link>,
+                key: '/Test/react实现定时器',
+                rules: ['*'],
             }
         ]
     }
