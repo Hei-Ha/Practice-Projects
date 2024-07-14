@@ -9,6 +9,7 @@ import CustomXY from './src/Test5/index.tsx';
 import ReactComponent from './src/Test6'
 import Test7 from './src/Test7'
 import Test8 from './src/Test8'
+import EmptyTest from './src/Test9'
 
 export default [
     {
@@ -64,6 +65,12 @@ export default [
                 path: '/Test/react实现定时器',
                 rules: ['*'],
                 element: <Test8 />
+            },
+            {
+                name: '空白测试页面',
+                path: '/Test/emptyTest',
+                rules: ['*'],
+                element: <EmptyTest />
             }
         ]
     },

@@ -48,6 +48,11 @@ export default [
                 label: <Link to={'Test/react实现定时器'}>8-react实现定时器</Link>,
                 key: '/Test/react实现定时器',
                 rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/emptyTest'}>9-空白测试页面</Link>,
+                key: '/Test/emptyTest',
+                rules: ['*'],
             }
         ]
     }
