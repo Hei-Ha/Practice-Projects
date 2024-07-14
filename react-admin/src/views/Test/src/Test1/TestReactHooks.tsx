@@ -14,10 +14,6 @@ const TestReactHooks = () => {
         
     }, [])
     
-    useEffect(() => {
-    
-    }, [count])
-    
     return <div>
         This is count: { count }
     </div>
