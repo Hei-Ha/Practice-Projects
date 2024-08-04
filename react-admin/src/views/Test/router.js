@@ -10,6 +10,7 @@ import ReactComponent from './src/Test6'
 import Test7 from './src/Test7'
 import Test8 from './src/Test8'
 import EmptyTest from './src/Test9'
+import HourMeter from './src/Test10'
 
 export default [
     {
@@ -71,6 +72,12 @@ export default [
                 path: '/Test/emptyTest',
                 rules: ['*'],
                 element: <EmptyTest />
+            },
+            {
+                name: 'react 实现计时器',
+                path: '/Test/hourMeter',
+                rules: ['*'],
+                element: <HourMeter />
             }
         ]
     },

@@ -53,6 +53,11 @@ export default [
                 label: <Link to={'Test/emptyTest'}>9-空白测试页面</Link>,
                 key: '/Test/emptyTest',
                 rules: ['*'],
+            },
+            {
+                label: <Link to={'Test/hourMeter'}>10-react 计时器</Link>,
+                key: '/Test/hourMeter',
+                rules: ['*'],
             }
         ]
     }
