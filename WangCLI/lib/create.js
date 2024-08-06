@@ -38,7 +38,7 @@ const create  = async (appName, option) => {
                 return // 如果选择不覆盖已经存在的同名文件夹，则直接推退出
             }
             if (answer) {
-                console.log('Removing target folder...')
+                console.log('Remove existing folder...')
                 await fsp.rm(targetDir, { recursive: true });
             }
         }
