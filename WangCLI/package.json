@@ -14,8 +14,11 @@
     "@inquirer/prompts": "^5.3.6",
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
-    "fs-extra": "^11.2.0",
     "minimist": "^1.2.8",
     "validate-npm-package-name": "^5.0.1"
+  },
+  "devDependencies": {
+    "download-git-repo": "^3.0.2",
+    "ora": "^8.0.1"
   }
 }

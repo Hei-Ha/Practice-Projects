@@ -1,12 +1,10 @@
 import fsp from 'fs/promises'
 import fs from 'fs'
 import path from 'path'
-import fse from 'fs-extra/esm'
 import chalk from 'chalk'
 import * as Inquirer from '@inquirer/prompts';
 import validateNpmPackageName from 'validate-npm-package-name'
-
-
+import { CloneRepo } from '../utils/index.js'
 
 
 
@@ -44,10 +42,32 @@ const create  = async (appName, option) => {
         }
     }
     
-    const dirCreation = await fsp.mkdir(targetDir); // 在指定位置创建文件夹
-    console.log(dirCreation)
-    // TODO 拉取模版，或者根据配置生成项目文件
-    console.log('---------------', appName)
+    // const dirCreation = await fsp.mkdir(targetDir); // 在指定位置创建文件夹
+    
+    const frameName = await Inquirer.select({
+        message: "请选择模版",
+        choices: [
+            {
+                name: 'vue',
+                value: 'vue',
+                description: 'vue3 + vite + tailwindcss',
+            },
+            {
+                name: 'react',
+                value: 'react',
+                description: 'The library for web and native user interfaces',
+            },
+        ]
+    })
+    
+    if (frameName === 'vue') {
+        await CloneRepo('github.com:Hei-Ha/Vue3-template', targetDir)
+        // 'direct:https://github.com/Hei-Ha/Vue3-template.git' 直接使用 http url 下载，还未测试
+    }
+    
+    if (frameName === 'react') {
+        console.log(chalk.green('还没搭建好，敬请期待...'))
+    }
 }
 
 export {
