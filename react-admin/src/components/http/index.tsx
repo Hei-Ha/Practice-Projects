@@ -53,21 +53,6 @@ HTTP.interceptors.response.use((response) => {
     }
 })
 
-export const GET = (url: string, params?: object) => {
-    return HTTP.get(url, {
-        params
-    }).then((res) => {
-        if (res.status === 200) {
-            return res.data
-        }
-    })
-}
-
-export const POST = (url: string, params: object) => {
-    return HTTP.post(url, params)
-}
-
-
 const showLoading = () => {
     if (loadingCount > 0) {
         let dom = document.createElement('div')
@@ -82,4 +67,19 @@ const closeLoading = () => {
         document.body.removeChild(document.getElementById('loading'))
     }
     console.log('关闭弹窗')
+}
+
+export const GET = (url: string, params?: object, userConfig?: object) => {
+    return HTTP.get(url, {
+        params,
+        ...userConfig
+    }).then((res) => {
+        if (res.status === 200) {
+            return res.data
+        }
+    })
+}
+
+export const POST = (url: string, params: object, userConfig?: object) => {
+    return HTTP.post(url, params, userConfig)
 }

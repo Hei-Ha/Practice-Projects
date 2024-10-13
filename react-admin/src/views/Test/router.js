@@ -53,7 +53,7 @@ export default [
                 name: '封装React组件',
                 path: '/Test/封装React组件',
                 rules: ['*'],
-                element: <ReactComponent btnContent={12} hoverContent={34} />
+                element: <ReactComponent btnContent={'鼠标悬浮显示内容'} hoverContent={34} />
             },
             {
                 name: 'react闭包陷阱',

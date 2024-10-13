@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 export default [
     {
-        label: 'Virtual_List',
+        label: '使用ExcelJS导出excel',
         // key: '/virtualList',
         rules: ['*'],
-        weight: 3,
+        weight: 4,
         children: [
             {
-                label: <Link to='/virtualList'>Virtual_List</Link>,
-                key: '/virtualList',
+                label: <Link to='/excelJS'>使用ExcelJS导出excel</Link>,
+                key: '/excelJS',
                 rules: ['*']
             }
         ]

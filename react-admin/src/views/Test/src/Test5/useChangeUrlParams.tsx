@@ -8,7 +8,7 @@ const useChangeUrlParams = (key: string, initvalue: string) => {
     
     const handleUrlParams = (urlParmas: string) => {
         const map = new Map()
-        urlParmas.split('&').forEach((item: string) => {
+        urlParmas?.split('&').forEach((item: string) => {
             let arr = item.split('=')
             map.set(arr[0], arr[1])
         })
