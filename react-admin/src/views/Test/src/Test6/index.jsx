@@ -31,8 +31,8 @@ const Btn = (props) => {
         btnRef.current.addEventListener('mouseleave', onMouseLeave)
         
         return () => {
-            btnRef.current.removeEventListener('mouseover', onMouseOver)
-            btnRef.current.removeEventListener('mouseleave', onMouseLeave)
+            btnRef.current?.removeEventListener('mouseover', onMouseOver)
+            btnRef.current?.removeEventListener('mouseleave', onMouseLeave)
         }
         
     }, [btnRef.current])
