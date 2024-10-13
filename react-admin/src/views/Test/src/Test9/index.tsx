@@ -17,9 +17,17 @@ const EmptyTest = () => {
     }, [])
     
     
+    useEffect(() => {
+        console.log('change-----------------')
+    }, [testObj.a])
+    
     
     return <div>
         <Button onClick={() => {
+            console.log(testObj)
+            setTestObj({
+                a: testObj.a + 1
+            })
             // setTestObj({
             //     ...testObj
             // })
