@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const obj = {
+        label: '北京市',
+        children: [
+            {
+                label: '朝阳区',
+                children: [
+                    { label: '某某1街道' },
+                    { label: '某某2接到' }
+                ]
+            },
+            {
+                label: '昌平区',
+                children: [
+                    { label: '昌平某某3街道' },
+                    { label: '昌平某某4街道' }
+                ]
+            }
+        ]
+    }
+
+
+    const search = (obj, key) => {
+       const fun2 = (node, target, path) => {
+           let result = []
+           if (node.label.includes(target)) {
+               result.push([...path, node.label]) // 如果最终的 label 没有 target 就不存入 result 中
+           }
+           if (node.children) {
+               for (let i = 0; i < node.children.length; i++) {
+                   result = result.concat(fun2(node.children[i], target, [...path, node.label]))
+               }
+           }
+           return result
+       }
+
+        const res = fun2(obj, key, [])
+        console.log(res)
+    }
+
+
+
+    const arr = [1, 2, 3, 4]
+    const fun = () => {
+        let result = []
+        let left = 1
+        let right = arr.slice(1, arr.length).reduce((acc, cur) => acc * cur)
+
+        result.push(left * right)
+
+        for (let i = 1; i < arr.length; i++) {
+            left = left * arr[i - 1]
+            if (i === arr.length - 1) {
+                right = 1
+            } else {
+                right = arr.slice(i + 1, arr.length).reduce((acc, cur) => acc * cur)
+            }
+            result.push(left * right)
+        }
+        return result
+    }
+
+    console.log(fun(arr))
+
+</script>
+</body>
+</html>
