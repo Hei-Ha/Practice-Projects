@@ -1,8 +1,10 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import './style/global.css'
 import router from './route/router'
 import { RouterProvider } from 'react-router'
+import './style/global.css'
+import "@arco-design/web-react/dist/css/arco.css";
+
 
 
 const root = createRoot(document.getElementById('root') as HTMLElement)

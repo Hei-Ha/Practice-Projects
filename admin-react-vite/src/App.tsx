@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "@arco-design/web-react";
 
+const Sider = Layout.Sider;
+const Header = Layout.Header;
+const Footer = Layout.Footer;
+const Content = Layout.Content;
 
 const App: React.FC = () => {
     return (
-        <div>
-            <h1>Admin-React-Vite</h1>
-        </div>
-    )
-}
-export default App
+        <Layout style={{ height: "400px" }}>
+            <Header className="bg-[#ccc]">Header</Header>
+            <Layout>
+                <Sider>Sider</Sider>
+                <Content>Content</Content>
+            </Layout>
+            <Footer>Footer</Footer>
+        </Layout>
+    );
+};
+export default App;
