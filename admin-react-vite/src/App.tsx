@@ -8,13 +8,12 @@ const Content = Layout.Content;
 
 const App: React.FC = () => {
     return (
-        <Layout style={{ height: "400px" }}>
-            <Header className="bg-[#ccc]">Header</Header>
+        <Layout className="h-screen w-screen">
+            <Sider>Sider</Sider>
             <Layout>
-                <Sider>Sider</Sider>
+                <Header className="bg-[#ccc]">Header</Header>
                 <Content>Content</Content>
             </Layout>
-            <Footer>Footer</Footer>
         </Layout>
     );
 };
