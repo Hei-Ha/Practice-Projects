@@ -1,15 +1,17 @@
 import React from "react";
 import { Layout } from "@arco-design/web-react";
+import SilderMenu from "./components/layout/SilderMenu";
 
 const Sider = Layout.Sider;
 const Header = Layout.Header;
-const Footer = Layout.Footer;
 const Content = Layout.Content;
 
 const App: React.FC = () => {
     return (
         <Layout className="h-screen w-screen">
-            <Sider>Sider</Sider>
+            <Sider>
+                <SilderMenu />
+            </Sider>
             <Layout>
                 <Header className="bg-[#ccc]">Header</Header>
                 <Content>Content</Content>
