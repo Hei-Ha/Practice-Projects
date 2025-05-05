@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "@arco-design/web-react";
-import SilderMenu from "./components/layout/SilderMenu";
+import SilderMenu from '@src/components/layout/SilderMenu'
 
 const Sider = Layout.Sider;
 const Header = Layout.Header;
