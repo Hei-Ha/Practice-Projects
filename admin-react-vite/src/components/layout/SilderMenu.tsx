@@ -6,8 +6,24 @@ const MenuItem = Menu.Item;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-
-
+const MenusList = [
+    {
+        label: "1231",
+        key: "1231",
+        icon: <IconApps />,
+        children: [
+            {
+                label: "first",
+                key: "first",
+                icon: <IconApps />,
+            },
+            {
+                label: "second",
+                key: "second",
+            },
+        ],
+    },
+];
 
 export const SilderMenu = () => {
     return (
@@ -18,49 +34,28 @@ export const SilderMenu = () => {
                 defaultOpenKeys={["0"]}
                 defaultSelectedKeys={["0_1"]}
             >
-                <SubMenu
-                    key="0"
-                    title={
-                        <>
-                            <IconApps /> Navigation 1
-                        </>
-                    }
-                >
-                    <MenuItem key="0_0">Menu 1</MenuItem>
-                    <MenuItem key="0_1">Menu 2</MenuItem>
-                    <MenuItem key="0_2" disabled>
-                        Menu 3
-                    </MenuItem>
-                </SubMenu>
-                <SubMenu
-                    key="1"
-                    title={
-                        <>
-                            <IconBug /> Navigation 2
-                        </>
-                    }
-                >
-                    <MenuItem key="1_0">Menu 1</MenuItem>
-                    <MenuItem key="1_1">Menu 2</MenuItem>
-                    <MenuItem key="1_2">Menu 3</MenuItem>
-                </SubMenu>
-                <SubMenu
-                    key="2"
-                    title={
-                        <>
-                            <IconBulb /> Navigation 3
-                        </>
-                    }
-                >
-                    <MenuItemGroup key="2_0" title="Menu Group 1">
-                        <MenuItem key="2_0_0">Menu 1</MenuItem>
-                        <MenuItem key="2_0_1">Menu 2</MenuItem>
-                    </MenuItemGroup>
-                    <MenuItemGroup key="2_1" title="Menu Group 1">
-                        <MenuItem key="2_1_0">Menu 3</MenuItem>
-                        <MenuItem key="2_1_1">Menu 4</MenuItem>
-                    </MenuItemGroup>
-                </SubMenu>
+                {MenusList.map(item => {
+                    return (
+                        <SubMenu
+                            key={item.key}
+                            title={
+                                <>
+                                    {item.icon}
+                                    {item.label}
+                                </>
+                            }
+                        >
+                            {item.children.map(child => {
+                                return (
+                                    <MenuItem key={child.key}>
+                                        {child.icon}
+                                        {child.label}
+                                    </MenuItem>
+                                );
+                            })}
+                        </SubMenu>
+                    );
+                })}
             </Menu>
         </div>
     );
