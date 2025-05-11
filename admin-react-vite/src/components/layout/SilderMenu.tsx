@@ -1,13 +1,10 @@
-import React from "react";
 import { Menu } from "@arco-design/web-react";
-import { IconApps, IconBug, IconBulb } from "@arco-design/web-react/icon";
 import { Link } from "react-router";
 import { MenusList } from "@src/menus/menus";
 import { MenuItemType } from "@src/types/common";
 
 const MenuItem = Menu.Item;
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 
 export const SilderMenu = () => {
     return (
@@ -37,23 +34,24 @@ export const SilderMenu = () => {
                                     {item.children?.map(
                                         (child: MenuItemType) => {
                                             return (
-                                                <MenuItem key={child.key}>
-                                                    <Link to={child.key}>
+                                                <Link to={child.key}>
+                                                    <MenuItem key={child.key}>
                                                         {child.icon}
                                                         {child.label}
-                                                    </Link>
-                                                </MenuItem>
+                                                    </MenuItem>
+                                                </Link>
                                             );
                                         }
                                     )}
                                 </SubMenu>
                             ) : (
-                                <MenuItem key={item.key}>
-                                    <Link to={item.key}>
+                                <Link to={item.key}>
+                                    <MenuItem key={item.key}>
+                                        <div></div>
                                         {item.icon}
                                         {item.label}
-                                    </Link>
-                                </MenuItem>
+                                    </MenuItem>
+                                </Link>
                             )}
                         </>
                     );
