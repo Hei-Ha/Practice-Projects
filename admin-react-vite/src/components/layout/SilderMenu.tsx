@@ -1,39 +1,26 @@
 import React from "react";
 import { Menu } from "@arco-design/web-react";
 import { IconApps, IconBug, IconBulb } from "@arco-design/web-react/icon";
+import { Link } from "react-router";
+import { MenusList } from "@src/menus/menus";
+import { MenuItemType } from "@src/types/common";
 
 const MenuItem = Menu.Item;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
-
-const MenusList = [
-    {
-        label: "1231",
-        key: "1231",
-        icon: <IconApps />,
-        children: [
-            {
-                label: "first",
-                key: "first",
-                icon: <IconApps />,
-            },
-            {
-                label: "second",
-                key: "second",
-            },
-        ],
-    },
-];
 
 export const SilderMenu = () => {
     return (
         <div>
             <Menu
                 style={{ width: 200, height: "100%" }}
-                hasCollapseButton
+                hasCollapseButton={false}
                 defaultOpenKeys={["0"]}
                 defaultSelectedKeys={["0_1"]}
             >
+                <Link to={"/"}>
+                    <div className="logo">Hei-Ha</div>
+                </Link>
                 {MenusList.map(item => {
                     return (
                         <SubMenu
@@ -45,11 +32,13 @@ export const SilderMenu = () => {
                                 </>
                             }
                         >
-                            {item.children.map(child => {
+                            {item.children?.map((child: MenuItemType) => {
                                 return (
                                     <MenuItem key={child.key}>
-                                        {child.icon}
-                                        {child.label}
+                                        <Link to={child.key}>
+                                            {child.icon}
+                                            {child.label}
+                                        </Link>
                                     </MenuItem>
                                 );
                             })}
