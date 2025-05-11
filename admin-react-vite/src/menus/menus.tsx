@@ -8,6 +8,11 @@ import { MenuItemType } from "@src/types/common";
 */
 export const MenusList: MenuItemType[] = [
     {
+        label: "Home",
+        key: "/home",
+        icon: <IconApps />,
+    },
+    {
         label: "Test",
         key: "test",
         icon: <IconApps />,

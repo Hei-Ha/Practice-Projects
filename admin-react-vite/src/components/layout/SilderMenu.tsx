@@ -21,28 +21,41 @@ export const SilderMenu = () => {
                 <Link to={"/"}>
                     <div className="logo">Hei-Ha</div>
                 </Link>
-                {MenusList.map(item => {
+                {MenusList.map((item: MenuItemType) => {
                     return (
-                        <SubMenu
-                            key={item.key}
-                            title={
-                                <>
-                                    {item.icon}
-                                    {item.label}
-                                </>
-                            }
-                        >
-                            {item.children?.map((child: MenuItemType) => {
-                                return (
-                                    <MenuItem key={child.key}>
-                                        <Link to={child.key}>
-                                            {child.icon}
-                                            {child.label}
-                                        </Link>
-                                    </MenuItem>
-                                );
-                            })}
-                        </SubMenu>
+                        <>
+                            {item.children ? (
+                                <SubMenu
+                                    key={item.key}
+                                    title={
+                                        <>
+                                            {item.icon}
+                                            {item.label}
+                                        </>
+                                    }
+                                >
+                                    {item.children?.map(
+                                        (child: MenuItemType) => {
+                                            return (
+                                                <MenuItem key={child.key}>
+                                                    <Link to={child.key}>
+                                                        {child.icon}
+                                                        {child.label}
+                                                    </Link>
+                                                </MenuItem>
+                                            );
+                                        }
+                                    )}
+                                </SubMenu>
+                            ) : (
+                                <MenuItem key={item.key}>
+                                    <Link to={item.key}>
+                                        {item.icon}
+                                        {item.label}
+                                    </Link>
+                                </MenuItem>
+                            )}
+                        </>
                     );
                 })}
             </Menu>
