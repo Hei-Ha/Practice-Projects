@@ -23,7 +23,7 @@ export const SilderMenu = () => {
                         <>
                             {item.children ? (
                                 <SubMenu
-                                    key={item.key}
+                                    key={item.path}
                                     title={
                                         <>
                                             {item.icon}
@@ -34,8 +34,8 @@ export const SilderMenu = () => {
                                     {item.children?.map(
                                         (child: MenuItemType) => {
                                             return (
-                                                <Link to={child.key}>
-                                                    <MenuItem key={child.key}>
+                                                <Link to={child.path}>
+                                                    <MenuItem key={child.path}>
                                                         {child.icon}
                                                         {child.label}
                                                     </MenuItem>
@@ -45,8 +45,8 @@ export const SilderMenu = () => {
                                     )}
                                 </SubMenu>
                             ) : (
-                                <Link to={item.key}>
-                                    <MenuItem key={item.key}>
+                                <Link to={item.path}>
+                                    <MenuItem key={item.path}>
                                         <div></div>
                                         {item.icon}
                                         {item.label}
