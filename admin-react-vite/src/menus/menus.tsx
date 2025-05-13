@@ -9,21 +9,19 @@ import { MenuItemType } from "@src/types/common";
 export const MenusList: MenuItemType[] = [
     {
         label: "Home",
-        key: "/home",
+        path: "/home",
         icon: <IconApps />,
     },
     {
-        label: "Test",
-        key: "test",
+        label: "测试Demo",
+        path: '/test',
         icon: <IconApps />,
         children: [
             {
-                label: "Test1",
-                key: "test1",
-            },
-            {
-                label: "Test2",
-                key: "test2",
+                label: "TestDemo1",
+                path: "testDemo1",
+                icon: <IconApps />,
+                title: "react 父组件调用子组件",
             },
         ],
     },
