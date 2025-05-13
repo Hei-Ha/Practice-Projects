@@ -3,4 +3,5 @@ export interface MenuItemType {
     path: string;
     icon?: React.ReactNode;
     children?: MenuItemType[];
+    title?: string;
 }

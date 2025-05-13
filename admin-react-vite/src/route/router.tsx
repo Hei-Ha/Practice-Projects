@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router'
 import App from '@src/App'
-import Home from '@src/pages/home/home'
+import {Outlet} from "react-router";
+import Home from '@src/views/home/home'
+import TestDemo1 from '@src/views/TestDemo/testDemo1'
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -9,6 +12,16 @@ const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <Home />,
+            },
+            {
+                path: '/test',
+                element: <Outlet />,
+                children: [
+                    {
+                        path: 'testDemo1',
+                        element: <TestDemo1 />,
+                    },
+                ],
             },
         ],
     },

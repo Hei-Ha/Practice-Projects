@@ -1,4 +1,4 @@
-import { Menu } from "@arco-design/web-react";
+import { Menu, Tooltip } from "@arco-design/web-react";
 import { Link } from "react-router";
 import { MenusList } from "@src/menus/menus";
 import { MenuItemType } from "@src/types/common";
@@ -13,14 +13,13 @@ export const SilderMenu = () => {
                 style={{ width: 200, height: "100%" }}
                 hasCollapseButton={false}
                 defaultOpenKeys={["0"]}
-                defaultSelectedKeys={["0_1"]}
-            >
+                defaultSelectedKeys={["0_1"]}>
                 <Link to={"/"}>
                     <div className="logo">Hei-Ha</div>
                 </Link>
                 {MenusList.map((item: MenuItemType) => {
                     return (
-                        <>
+                        <div key={item.path}>
                             {item.children ? (
                                 <SubMenu
                                     key={item.path}
@@ -29,31 +28,37 @@ export const SilderMenu = () => {
                                             {item.icon}
                                             {item.label}
                                         </>
-                                    }
-                                >
+                                    }>
                                     {item.children?.map(
                                         (child: MenuItemType) => {
                                             return (
-                                                <Link to={child.path}>
-                                                    <MenuItem key={child.path}>
-                                                        {child.icon}
-                                                        {child.label}
-                                                    </MenuItem>
-                                                </Link>
+                                                <Tooltip position="rt" content={child.title || ''} key={`${item.path}/${child.path}`}>
+                                                    <Link
+                                                        to={`${item.path}/${child.path}`}>
+                                                        <MenuItem
+                                                            key={`${item.path}/${child.path}`}>
+                                                            {child.icon}
+                                                            {child.label}
+                                                        </MenuItem>
+                                                    </Link>
+                                                </Tooltip>
                                             );
                                         }
                                     )}
                                 </SubMenu>
                             ) : (
-                                <Link to={item.path}>
-                                    <MenuItem key={item.path}>
-                                        <div></div>
-                                        {item.icon}
-                                        {item.label}
-                                    </MenuItem>
-                                </Link>
+                                <Tooltip position="rt" content={item.title || ''} key={item.path}>
+                                    <Link
+                                        to={item.path}>
+                                        <MenuItem key={item.path}>
+                                            <div></div>
+                                            {item.icon}
+                                            {item.label}
+                                        </MenuItem>
+                                    </Link> 
+                                </Tooltip>
                             )}
-                        </>
+                        </div>
                     );
                 })}
             </Menu>
