@@ -18,7 +18,7 @@ const App: React.FC = () => {
                 <Header>
                     <CustomHeader />
                 </Header>
-                <Content className="bg-[#f5f7fa]">
+                <Content className="bg-[#f5f7fa] px-2.5">
                     <Outlet/>
                 </Content>
             </Layout>
