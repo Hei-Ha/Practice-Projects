@@ -18,10 +18,8 @@ const App: React.FC = () => {
                 <Header>
                     <CustomHeader />
                 </Header>
-                <Content className="bg-[#f5f7fa] p-0">
-                    <div className="bg-[#ccc] w-full h-full rounded-lg">
-                        <Outlet/>
-                    </div>
+                <Content className="bg-[#f5f7fa]">
+                    <Outlet/>
                 </Content>
             </Layout>
         </Layout>

@@ -1,5 +1,5 @@
-@import "@arco-design/web-react/dist/css/arco.css";
 @import "tailwindcss";
+@import "@arco-design/web-react/dist/css/arco.css";
 
 * {
     margin: 0;
