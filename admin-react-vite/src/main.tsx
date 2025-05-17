@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import router from './route/router'
 import { RouterProvider } from 'react-router'
 import './style/global.css'
-import "@arco-design/web-react/dist/css/arco.css";
+
 
 
 

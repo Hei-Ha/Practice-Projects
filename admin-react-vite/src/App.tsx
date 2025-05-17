@@ -2,6 +2,7 @@ import React from "react";
 import {Layout} from "@arco-design/web-react";
 import SilderMenu from "@src/components/layout/SilderMenu";
 import {Outlet} from "react-router";
+import CustomHeader from "@src/components/layout/header";
 
 const Sider = Layout.Sider;
 const Header = Layout.Header;
@@ -14,8 +15,10 @@ const App: React.FC = () => {
                 <SilderMenu/>
             </Sider>
             <Layout>
-                <Header className="bg-[#ccc]">Header</Header>
-                <Content>
+                <Header>
+                    <CustomHeader />
+                </Header>
+                <Content className="bg-[#f5f7fa] px-2.5">
                     <Outlet/>
                 </Content>
             </Layout>
