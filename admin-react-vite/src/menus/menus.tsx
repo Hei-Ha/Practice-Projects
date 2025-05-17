@@ -23,6 +23,12 @@ export const MenusList: MenuItemType[] = [
                 icon: <IconApps />,
                 title: "react 父组件调用子组件",
             },
+            {
+                label: "TestDemo2",
+                path: "testDemo2",
+                icon: <IconApps />,
+                title: "图片懒加载",
+            }
         ],
     },
 ];
