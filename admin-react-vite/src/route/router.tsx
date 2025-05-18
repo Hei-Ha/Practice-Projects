@@ -4,6 +4,7 @@ import {Outlet} from "react-router";
 import Home from '@src/views/home/home'
 import TestDemo1 from '@src/views/TestDemo/TestDemo1'
 import TestDemo2 from '@src/views/TestDemo/TestDemo2'
+import TestDemo3 from '@src/views/TestDemo/TestDemo3'
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
                     {
                         path: 'testDemo2',
                         element: <TestDemo2 />,
+                    },
+                    {
+                        path: 'testDemo3',
+                        element: <TestDemo3 />,
                     },
                 ],
             },
