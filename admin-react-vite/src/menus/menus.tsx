@@ -34,7 +34,14 @@ export const MenusList: MenuItemType[] = [
                 path: "testDemo3",
                 icon: <IconApps />,
                 title: "自定义 hooks 实时显示鼠标坐标",
-            }
+            },
+            {
+                label: "TestDemo4",
+                path: "testDemo4",
+                icon: <IconApps />,
+                title: "React 闭包陷阱",
+            },  
+            
         ],
     },
 ];

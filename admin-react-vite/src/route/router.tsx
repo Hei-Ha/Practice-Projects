@@ -5,7 +5,7 @@ import Home from '@src/views/home/home'
 import TestDemo1 from '@src/views/TestDemo/TestDemo1'
 import TestDemo2 from '@src/views/TestDemo/TestDemo2'
 import TestDemo3 from '@src/views/TestDemo/TestDemo3'
-
+import TestDemo4 from '@src/views/TestDemo/TestDemo4'   
 const router = createBrowserRouter([
     {
         path: '/',
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
                     {
                         path: 'testDemo3',
                         element: <TestDemo3 />,
+                    },
+                    {
+                        path: 'testDemo4',
+                        element: <TestDemo4 />,
                     },
                 ],
             },
