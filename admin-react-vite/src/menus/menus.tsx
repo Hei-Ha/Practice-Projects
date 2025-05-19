@@ -41,6 +41,12 @@ export const MenusList: MenuItemType[] = [
                 icon: <IconApps />,
                 title: "React 闭包陷阱",
             },  
+            {
+                label: "TestDemo5",
+                path: "testDemo5",
+                icon: <IconApps />,
+                title: "虚拟列表",
+            },
             
         ],
     },
