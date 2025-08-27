@@ -3,14 +3,15 @@ import { ContentHeader } from '@src/components/ContentHeader';
 
 const TestDemo5: FC = () => {
     const arr = new Array(1000).fill(0);
-    const itemHeight = 50;
+    const itemHeight = 50; // 每条 item 的高度
 
-    const [startIndex, setStartIndex] = useState<number>(0);
-    const [endIndex, setEndIndex] = useState<number>(0);
+    const [startIndex, setStartIndex] = useState<number>(0); // 开始索引
+    const [endIndex, setEndIndex] = useState<number>(0); // 结束索引
 
-    const listRef = useRef<HTMLDivElement | null>(null);
+    const listRef = useRef<HTMLDivElement | null>(null); // 列表容器
 
     const scrollFun = () => {
+        // 滚动事件处理函数
         if (!listRef.current) return;
         const newStartIndex = Math.floor(listRef.current.scrollTop / itemHeight);
         setStartIndex(newStartIndex);
@@ -19,10 +20,10 @@ const TestDemo5: FC = () => {
 
     useEffect(() => {
         if (listRef.current) {
-            const items = Math.ceil(listRef.current.clientHeight / itemHeight);
-            setEndIndex(startIndex + items);
+            const items = Math.ceil(listRef.current.clientHeight / itemHeight); // 计算需要渲染的 item 数量
+            setEndIndex(startIndex + items); // 设置结束索引
             
-            listRef.current.addEventListener('scroll', scrollFun);
+            listRef.current.addEventListener('scroll', scrollFun); // 监听滚动事件
         }
         
         return () => {
