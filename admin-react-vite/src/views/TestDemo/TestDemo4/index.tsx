@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ErrorDemo from './components/errorDemo';
+import ErrorDemo from './components/ErrorDemo';
 import RightDemo from './components/RightDemo';
 
 export const TestDemo4 = () => {

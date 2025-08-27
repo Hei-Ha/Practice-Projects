@@ -18,29 +18,41 @@ export const MenusList: MenuItemType[] = [
         icon: <IconApps />,
         children: [
             {
-                label: "TestDemo1",
+                label: "react 父组件调用子组件",
                 path: "testDemo1",
                 icon: <IconApps />,
                 title: "react 父组件调用子组件",
             },
             {
-                label: "TestDemo2",
+                label: "图片懒加载",
                 path: "testDemo2",
                 icon: <IconApps />,
                 title: "图片懒加载",
             },
             {
-                label: "TestDemo3",
+                label: "自定义 hooks 实时显示鼠标坐标",
                 path: "testDemo3",
                 icon: <IconApps />,
                 title: "自定义 hooks 实时显示鼠标坐标",
             },
             {
-                label: "TestDemo4",
+                label: "React 闭包陷阱",
                 path: "testDemo4",
                 icon: <IconApps />,
                 title: "React 闭包陷阱",
             },  
+            {
+                label: "虚拟列表",
+                path: "testDemo5",
+                icon: <IconApps />,
+                title: "虚拟列表",
+            },
+            {
+                label: "React 实现倒计时",
+                path: "testDemo6",
+                icon: <IconApps />,
+                title: "React 实现倒计时",
+            },
             
         ],
     },
