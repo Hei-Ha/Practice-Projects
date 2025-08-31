@@ -34,7 +34,7 @@ const TestDemo5: FC = () => {
     const renderList = useCallback(() => {
         const rows = [];
         for (let i = startIndex; i <= endIndex + 1; i++) {
-            // 渲染每个列表项
+            // 渲染每个列表项，使用 transform 替代 top/left
             rows.push(
                 <div
                     key={i}
@@ -42,12 +42,18 @@ const TestDemo5: FC = () => {
                         width: '100%',
                         height: '50px',
                         position: 'absolute',
-                        top: i * itemHeight + 'px',
+                        // top: i * itemHeight + 'px',
+                        transform: `translateY(${i * itemHeight}px)`,
                         left: 0,
                         right: 0,
+                        borderBottom: '1px solid #eee', // 添加一些样式让列表项更明显
+                        display: 'flex',
+                        alignItems: 'center',
+                        paddingLeft: '10px',
+                        backgroundColor: i % 2 === 0 ? '#f9f9f9' : '#ffffff'
                     }}
                 >
-                    {i}
+                    Item {i}
                 </div>
             );
         }
