@@ -53,6 +53,12 @@ export const MenusList: MenuItemType[] = [
                 icon: <IconApps />,
                 title: "React 实现倒计时",
             },
+            {
+                label: '7-Memo,useMemo,useCallback',
+                path: 'testDemo7',
+                icon: <IconApps />,
+                title: '测试 memo、useMemo、useCallback'
+            }
             
         ],
     },

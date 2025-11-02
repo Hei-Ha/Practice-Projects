@@ -8,6 +8,8 @@ import TestDemo3 from '@src/views/TestDemo/TestDemo3';
 import TestDemo4 from '@src/views/TestDemo/TestDemo4';
 import TestDemo5 from '@src/views/TestDemo/TestDemo5';
 import TestDemo6 from '@src/views/TestDemo/TestDemo6';
+import TestDemo7 from '@src/views/TestDemo/TestDemo7';
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -44,6 +46,10 @@ const router = createBrowserRouter([
                     {
                         path: 'testDemo6',
                         element: <TestDemo6 />,
+                    },
+                    {
+                        path: 'testDemo7',
+                        element: <TestDemo7 />,
                     },
                 ],
             },
